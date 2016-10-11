@@ -1,0 +1,11 @@
+harga=`curl -s "http://www.elevenia.co.id/prd-apple-iphone-7-plus-black-128gb-garansi-6242166" | grep "Harga Akhir" -A10 | grep "Rp" | cut -d">" -f2 | c
+ut -d"<" -f1`
+if[$harga<15000000]
+then
+        echo $harga
+fi
+
+0 7-19 * * 1-5 /UTS/no1.ssh
+
+no 2
+curl -s "http://stats.labs.apnic.net/ipv6/ID" | grep ipv6/AS | cut -d"\\" -f3 | sort | sed 's/""//g' | sed 's/"//g' | sed 's/<//g' | sed 's/>//g' | sed 's/\/a//g' | sed 's/, PT/ PT/g' | sed 's/v: //g' | sed 's/f://g' |sed 's/{//g' | sed 's/}//g' | sed 's/]//g' | sed 's/,/;/g'
